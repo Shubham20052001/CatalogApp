@@ -10,7 +10,7 @@ class MyTheme {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: TextStyle(
-            color: Colors.black, fontSize: 19, fontWeight: FontWeight.bold),
+            color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
       ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(

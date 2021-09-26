@@ -11,7 +11,7 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: MyTheme.creamColor,
+          backgroundColor: Colors.transparent,
         ),
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
@@ -23,12 +23,12 @@ class HomeDetailPage extends StatelessWidget {
               "\$${catalog.price}".text.bold.xl4.red800.make(),
               ElevatedButton(
                 onPressed: () {},
-                child: "Buy".text.make(),
+                child: "Add to cart".text.make(),
                 style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(MyTheme.darkBluishColor),
                     shape: MaterialStateProperty.all(const StadiumBorder())),
-              ).wh(100, 50)
+              ).wh(120, 50)
             ],
           ).p32(),
         ),
@@ -58,6 +58,12 @@ class HomeDetailPage extends StatelessWidget {
                                     context.captionStyle ?? const TextStyle())
                                 .make(),
                             10.heightBox,
+                            "You have an interpreter — a virtual ambassador. In the same way, a Windows computer runs its own bytecode-interpreting software. That software is the Java Virtual Machine."
+                                .text
+                                .textStyle(
+                                    context.captionStyle ?? const TextStyle())
+                                .make()
+                                .p16()
                           ],
                         ).py64(),
                       )))

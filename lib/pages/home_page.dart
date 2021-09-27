@@ -7,7 +7,6 @@ import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_catalog/models/catalog.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -37,10 +36,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          child: const Icon(CupertinoIcons.cart),
-          backgroundColor: MyTheme.darkBluishColor,
+          child: const Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          ),
+          backgroundColor: Theme.of(context).buttonColor,
         ),
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: Theme.of(context).canvasColor,
         body: SafeArea(
           child: Container(
             padding: Vx.m32,

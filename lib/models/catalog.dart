@@ -1,4 +1,11 @@
 class CatalogModel {
+// Making class as Singleton
+  static final cartModel = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => cartModel;
+
   static List<Item>? items;
 
   // Get Item by ID...

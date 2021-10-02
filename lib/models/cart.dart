@@ -1,10 +1,17 @@
 import 'package:flutter_catalog/models/catalog.dart';
 
 class CartModel {
+  // Making class as Singleton
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+
   // catalog fields
   CatalogModel _catalog;
 
-// Collection of IDs = store IDs of each item
+  // Collection of IDs = store IDs of each item
   final List<int> _itemIds = [];
 
   // Get Catalog

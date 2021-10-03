@@ -9,7 +9,7 @@ class CartModel {
   factory CartModel() => cartModel;
 
   // catalog fields
-  CatalogModel _catalog;
+  CatalogModel _catalog = CatalogModel();
 
   // Collection of IDs = store IDs of each item
   final List<int> _itemIds = [];

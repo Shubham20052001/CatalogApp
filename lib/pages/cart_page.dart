@@ -16,7 +16,7 @@ class CartPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const _CartList().p32().expand(),
+          _CartList().p32().expand(),
           const Divider(),
           const _CartTotal(),
         ],
@@ -61,14 +61,7 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({Key? key}) : super(key: key);
-
-  @override
-  __CartListState createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
+class _CartList extends StatelessWidget {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
@@ -83,7 +76,7 @@ class __CartListState extends State<_CartList> {
               trailing: IconButton(
                   onPressed: () {
                     _cart.remove(_cart.items[index]);
-                    setState(() {});
+                    // setState(() {});
                   },
                   icon: Icon(Icons.remove_circle_outline)),
               title: Text(_cart.items[index].name),

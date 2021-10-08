@@ -44,24 +44,26 @@ class HomeDetailPage extends StatelessWidget {
                       child: Container(
                         width: context.screenWidth,
                         color: Theme.of(context).cardColor,
-                        child: Column(
-                          children: [
-                            catalog.name.text.xl4.bold
-                                .color(Theme.of(context).accentColor)
-                                .make(),
-                            catalog.desc.text.xl
-                                .textStyle(
-                                    context.captionStyle ?? const TextStyle())
-                                .make(),
-                            10.heightBox,
-                            "You have an interpreter — a virtual ambassador. In the same way, a Windows computer runs its own bytecode-interpreting software. That software is the Java Virtual Machine."
-                                .text
-                                .textStyle(
-                                    context.captionStyle ?? const TextStyle())
-                                .make()
-                                .p16()
-                          ],
-                        ).py64(),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              catalog.name.text.xl4.bold
+                                  .color(Theme.of(context).accentColor)
+                                  .make(),
+                              catalog.desc.text.xl
+                                  .textStyle(
+                                      context.captionStyle ?? const TextStyle())
+                                  .make(),
+                              10.heightBox,
+                              "You have an interpreter — a virtual ambassador. In the same way, a Windows computer runs its own bytecode-interpreting software. That software is the Java Virtual Machine."
+                                  .text
+                                  .textStyle(
+                                      context.captionStyle ?? const TextStyle())
+                                  .make()
+                                  .p16()
+                            ],
+                          ).py64(),
+                        ),
                       )))
             ],
           ),
